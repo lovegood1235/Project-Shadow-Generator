@@ -1,3 +1,3 @@
 # projet shadow-generator
 
-decouvrer mon projet ici en live : [mon projet shadow-generator](https://github.com/lovegood1235/Project-Shadow-Generator/settings/pages).
+decouvrer mon projet ici en live : [mon projet shadow-generator](https://lovegood1235.github.io/Project-Shadow-Generator/).
