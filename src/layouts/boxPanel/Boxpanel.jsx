@@ -1,0 +1,31 @@
+import { useSelector } from "react-redux"
+import Boxrange from "./Boxrange"
+import Boxcolorpicker from "./Boxcolorpicker"
+
+
+export default function Boxpanel() {
+
+  const boxState = useSelector(state => state.boxpropertie)
+
+  const boxinputs = boxState.map((input, index) => {
+
+    if(input.type === "range"){
+      return <Boxrange key={index} inputData={input}/>
+    }
+
+    else if(input.type === "color"){
+      return <Boxcolorpicker  key={index} inputData={input}/>
+    }
+    // input.type === "range" ? <Boxrange key={index} inputData={input}/>
+    // && input.type === "color" ? <Boxcolorpicker  key={index} inputData={input}/>
+  })
+
+
+  return (
+    <div className="bg-gray-50 px-6 py-4 border-b border-gray-300">
+
+      <p className="font-bold text-lg my-2">Box properties</p>
+      {boxinputs}
+    </div>
+  )
+}
